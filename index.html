@@ -3,13 +3,19 @@
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>auto.service:perm</title> 
+        <title>AUTOTECHservice:perm</title> 
         <link rel="stylesheet" type="text/css" href="reset.css"/>
         <script src="https://kit.fontawesome.com/6be9eee4ca.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('PSdr63ckJqC6Ds09Z');
+            })();
+        </script>   
     </head>
     
     <body>
@@ -22,14 +28,14 @@
                     <div class="header-contacts">
                         <div class="header-contact">
                             <i class="fa-solid fa-phone"></i>
-                            <p>+7 (908) 263-93-31</p>
+                            <p>+7 (908) 256-16-16</p>
                         </div> 
                         <div>
-                            <p class="header-contact margin">+7 (902) 806-91-17</p>
+                            <p class="header-contact margin">+7 (342) 271-61-69</p>
                         </div>
                         <div class="header-contact">
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
-                            <p>г. Пермь, ш. Космонавтов, 316в/2</p>
+                            <p>г. Пермь, ш. Космонавтов, 316/16</p>
                         </div>
                     </div>
                     
@@ -57,14 +63,14 @@
                     <div class="hero-contacts">
                         <div class="hero-phone">
                             <i class="fa-solid fa-phone"></i>
-                            <p>+7 (908) 263-93-31</p>
+                            <p>+7 (908) 256-16-16</p>
                         </div> 
                         <div>
-                            <p class=" hero-phone margin">+7 (902) 806-91-17</p>
+                            <p class=" hero-phone margin">+7 (342) 271-61-69</p>
                         </div>
                         <div class="hero-phone">
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
-                            <p>г. Пермь, ш. Космонавтов, 316в/2</p>
+                            <p>г. Пермь, ш. Космонавтов, 316/16</p>
                         </div>
                     </div>
                      
@@ -73,7 +79,7 @@
 
             <div class="about-us" id="pull-about-us">
                 <div class="inner about-us-flex">
-                    <p class= "about-us-text-discription">На рынке ремонта и обслуживания автомобилей мы уже 5 лет, выполняем ремонт различной сложности и имеем постоянных довольных клиентов. В нашем штане имеются узкопрофильные специалисты и сертифицированное оборудование. Даем гарантию на запчасти и выполнение работы.</p>
+                    <p class= "about-us-text-discription">На рынке ремонта и обслуживания автомобилей мы уже более 5 лет, выполняем ремонт различной сложности и имеем постоянных довольных клиентов. В нашем штане имеются узкопрофильные специалисты и сертифицированное оборудование. Даем гарантию на запчасти и выполненные работы.</p>
                 </div>
             </div>
 
@@ -127,8 +133,8 @@
             </div>
 
             <div class="map" id="pull-map">
-                <h2>Мы находимся по адресу: г. Пермь, ш. Kосмонавтов, 316в/2 (поворот перед АЗС Лукойл)</h2>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa66e45895f7dbf0fd5dccd7775d591718e5cf1cc9e1193fed7bf432eb66e649f&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+                <h2>Мы находимся по адресу: г. Пермь, ш. Космонавтов, 316/16 (поворот перед АЗС Лукойл)</h2>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b8a10ef7e6286b43fed26754feccb61c9d12e7fae4f268b7d28d61f5d79da46&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
             </div>
 
             <div class="form">
@@ -138,7 +144,7 @@
                         <p> Если у Вас остались вопросы, Вы можете запомнить форму и мы свяжемся с Вами в ближайщее время</p>
                     </div>
                     
-                    <form action="/url">
+                    <form id="form">
                         <div class="form-flex">
                             <div class="form-flex-item">
                                 <div class="form-inputs">
@@ -151,17 +157,17 @@
                                 </div>
                                 <div class="form-inputs">
                                     <label for="email">Email</label>
-                                    <input id="email" type="text"/>
+                                    <input id="email" type="email"/>
                                 </div>
                             </div>
                             
                             <div class="form-flex-item">
                                 <div class="form-textarea">
-                                    <label>Опишите Ваш вопрос</label>
-                                    <textarea></textarea>
+                                    <label for="message">Опишите Ваш вопрос</label>
+                                    <textarea id="message" type="text"></textarea>
                                 </div>
 
-                                <button class="btn-form">Отправить</button>
+                                <button id="btn-form" type="submit" class="btn-form">Отправить</button>
                             </div>
                         </div>
                     </form>
@@ -175,7 +181,7 @@
                 <div class="footer-contacts">
                     <div class="footer-contacts-items">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p>г. Пермь, ш. Космонавтов, 316в/2</p>
+                        <p>г. Пермь, ш. Космонавтов, 316/16</p>
                     </div>
                     <p>Часы работы: 09:00 - 20:00</p>
                     <p>Воскресенье выходной</p> 
@@ -185,9 +191,9 @@
                     <p class="title-social-contacts">Мы в социальных сетях:</p>
 
                     <div class="footer-icons">
-                        <a href="https://vk.com/makeup.auto59"><i class="fa-brands fa-vk vk-icon"></i></a>
-                        <i class="fa-brands fa-telegram telegram-icon"></i>
-                        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                        <a href="https://vk.com/autotechservice59"><i class="fa-brands fa-vk vk-icon"></i></a>
+                        <a href=""><i class="fa-brands fa-telegram telegram-icon"></i></a>
+                        <a href="https://wa.me/79082561616"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
                     </div>
 
                 </div>
@@ -195,16 +201,16 @@
                 <div class="footer-contacts">
                     <div class="footer-contacts-items">
                         <i class="fa-solid fa-envelope"></i>
-                        <p>golovenko.as@mail.ru</p>
+                        <p>autotechservice@gmail.com</p>
                     </div>
                     
                     <div class="footer-contacts-items">
                         <i class="fas fa-phone"></i>
-                        <p>+7 (908) 263-93-31</p>
+                        <p>+7 (908) 256-16-16</p>
                     </div>
 
                     <div class="footer-contacts-items">
-                        <p class="footer-second-phone-margin">+7 (902) 806-91-17</p>
+                        <p class="footer-second-phone-margin">+7 (342) 271-61-69</p>
                     </div>
      
                 </div>     
@@ -214,4 +220,3 @@
         <script src="/app.js"></script>
     </body>
 </html>
-
