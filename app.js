@@ -357,22 +357,28 @@ if (window.innerWidth > 768) {
 }
 
 function sendForm(event) {
-    
     event.stopPropagation()
-    console.log(event)
 
     const fromName = document.getElementById('name').value
     const message = document.getElementById('message').value
     const phone = document.getElementById('phone').value
     const email = document.getElementById('email').value
 
-    emailjs.send("service_k18ww5n","template_q2vopf4", {
+    emailjs.send("service_khn32p5","template_q2vopf4", {
         from_name: fromName,
         message: message,
         phone: phone,
         email: email,
     })
+
+    cleanForm()
 }
 
-// document.getElementById('form').addEventListener('submit', (event) => sendForm(event))
-document.getElementById('btn-form').addEventListener('onclick', (event) => sendForm(event))
+function cleanForm() {
+    document.getElementById('name').value = ""
+    document.getElementById('message').value = ""
+    document.getElementById('phone').value = ""
+    document.getElementById('email').value = ""
+}
+
+document.getElementById('btn-form').addEventListener('click', (event) => sendForm(event))
